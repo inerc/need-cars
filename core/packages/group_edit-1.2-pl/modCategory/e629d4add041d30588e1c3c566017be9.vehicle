@@ -1,0 +1,32 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+  ),
+  'namespace' => 'group_edit',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"group_edit-1.2-pl\\/modCategory\\/e629d4add041d30588e1c3c566017be9\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"group_edit"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"group_edit-1.2-pl\\/modCategory\\/e629d4add041d30588e1c3c566017be9\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"group_edit"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '94d71f2bafad3a8451ab75199231ffa0',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'e629d4add041d30588e1c3c566017be9',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Group Edit"}',
+);

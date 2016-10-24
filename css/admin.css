@@ -1,0 +1,11 @@
+#wb_adminMenu {
+    background: none repeat scroll 0px 0px #FFF;
+    box-shadow: 0px 0px 2px;
+    left: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 8px;
+    z-index: 999;
+	list-style:none;
+	font-size:12px;
+}

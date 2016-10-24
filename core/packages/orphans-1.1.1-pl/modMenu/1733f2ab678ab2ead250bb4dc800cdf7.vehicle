@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'f97046989c11802a236e0c20287f7ce7' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"orphans","controller":"index","haslayout":1,"lang_topics":"orphans:default","assets":"","help_url":""}',
+        'guid' => '145eae52dc62e8291f574dd424cf4560',
+        'native_key' => 1,
+        'signature' => '5992e4b09a74385ecbe418984c9a36eb',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'orphans',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd9508b50ecfe1e012ed701a3ad37b91e',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '1733f2ab678ab2ead250bb4dc800cdf7',
+  'native_key' => 'orphans',
+  'object' => '{"text":"orphans","parent":"components","action":1,"description":"orphans.menu_desc","icon":"","menuindex":3,"params":"","handler":"","permissions":"","namespace":"orphans","id":1}',
+);

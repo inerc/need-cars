@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'dd178643bfbb7e1f7c68ec1c2e26cbcc' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"janitor","parent":0,"controller":"index","haslayout":1,"lang_topics":"janitor:default,file","assets":"","help_url":""}',
+        'guid' => '235d7e632e51939b2670d822e5a71745',
+        'native_key' => 1,
+        'signature' => 'ee908abd9c8083128f1dcc40fec11a44',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'janitor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2cfaa16c72e043eadcfa1c5f95dd7f54',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'dd94253662601d0aa14a6c7c16cf02e2',
+  'native_key' => 'janitor',
+  'object' => '{"text":"janitor","parent":"components","action":1,"description":"janitor.desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":""}',
+);

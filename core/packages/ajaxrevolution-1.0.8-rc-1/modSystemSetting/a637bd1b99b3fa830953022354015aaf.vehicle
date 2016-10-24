@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '066b478eecb858611ac0b969451f2ef3',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a637bd1b99b3fa830953022354015aaf',
+  'native_key' => 'key_found_resource',
+  'object' => '{"key":"key_found_resource","value":"bool_found","xtype":"textfield","namespace":"AJAX Revolution","area":"Request Keys","editedon":null,"id":6,"properties":""}',
+);

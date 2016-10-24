@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      '02da434e081b6d4c7e4da0af90c52320' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":5,"event":"OnFileManagerUpload","priority":0,"propertyset":0}',
+        'guid' => 'e93af5d0b87de3159263c2f7f6cbed11',
+        'native_key' => 
+        array (
+          0 => 5,
+          1 => 'OnFileManagerUpload',
+        ),
+        'signature' => 'fb300103597530e2eda1df94ad4f2408',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'sanitizeupload',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '84c8ee1039a683927551af7ddf20ce70',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '9a223eb16a9eb8a0e14fac3fbecacd62',
+  'native_key' => 5,
+  'object' => '{"id":5,"source":1,"property_preprocess":0,"name":"SanitizeUpload","description":"SanitizeUpload sanitizes the name of the uploaded file.","editor_type":0,"category":4,"cache_type":0,"plugincode":"\\/\\/ on OnFileManagerUpload\\n\\/**\\n * SanitizeUpload for MODx Revolution\\n *\\n * This plugin sanitizes the name of an uploaded file.\\n *\\n * SanitizeUpload is free software; you can redistribute it and\\/or modify it under\\n * the terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * SanitizeUpload is distributed in the hope that it will be useful, but WITHOUT\\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\\n * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Inherit Template; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @author      Maarten     <@maarten>\\n * @copyright   Copyright\\u00a0(c)\\u00a02013,\\u00a0Magnatron\\n * @license     GPL v2\\n *\\n * @package     SanitizeUpload\\n * @subpackage  plugin\\n *\\/\\n\\n\\nif ($modx->event->name === \'OnFileManagerUpload\') {\\n\\t\\n\\t\\/\\/ Only when uploaded\\n\\tif(count($files)>0){\\n\\t\\t\\/\\/ create array of uploaded file(name)s\\n\\t\\t$names = array();\\n\\t\\tforeach($files as $file=>$finf){\\n\\t\\t\\t$names[] = $finf[\'name\'];\\n\\t\\t}\\n\\t\\t\\/\\/ check directory entries\\n\\t\\tif ($handle = opendir(MODX_BASE_PATH.$directory)) {\\n\\t\\t\\twhile (false !== ($entry = readdir($handle))) {\\n\\t\\t\\t\\tif(in_array($entry, $names)){\\n\\t\\t\\t\\t\\t\\/\\/ Only the uploaded files\\n\\t\\t\\t\\t\\t$nname = preg_replace(\'\\/[^a-zA-Z0-9\\\\.]+\\/\',\'_\',$entry);\\n\\t\\t\\t\\t\\trename(MODX_BASE_PATH.$directory.$entry, MODX_BASE_PATH.$directory.$nname);\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tclosedir($handle);\\n\\t\\t}\\n\\t}\\n}\\n\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/\\/ on OnFileManagerUpload\\n\\/**\\n * SanitizeUpload for MODx Revolution\\n *\\n * This plugin sanitizes the name of an uploaded file.\\n *\\n * SanitizeUpload is free software; you can redistribute it and\\/or modify it under\\n * the terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * SanitizeUpload is distributed in the hope that it will be useful, but WITHOUT\\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\\n * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Inherit Template; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @author      Maarten     <@maarten>\\n * @copyright   Copyright\\u00a0(c)\\u00a02013,\\u00a0Magnatron\\n * @license     GPL v2\\n *\\n * @package     SanitizeUpload\\n * @subpackage  plugin\\n *\\/\\n\\n\\nif ($modx->event->name === \'OnFileManagerUpload\') {\\n\\t\\n\\t\\/\\/ Only when uploaded\\n\\tif(count($files)>0){\\n\\t\\t\\/\\/ create array of uploaded file(name)s\\n\\t\\t$names = array();\\n\\t\\tforeach($files as $file=>$finf){\\n\\t\\t\\t$names[] = $finf[\'name\'];\\n\\t\\t}\\n\\t\\t\\/\\/ check directory entries\\n\\t\\tif ($handle = opendir(MODX_BASE_PATH.$directory)) {\\n\\t\\t\\twhile (false !== ($entry = readdir($handle))) {\\n\\t\\t\\t\\tif(in_array($entry, $names)){\\n\\t\\t\\t\\t\\t\\/\\/ Only the uploaded files\\n\\t\\t\\t\\t\\t$nname = preg_replace(\'\\/[^a-zA-Z0-9\\\\.]+\\/\',\'_\',$entry);\\n\\t\\t\\t\\t\\trename(MODX_BASE_PATH.$directory.$entry, MODX_BASE_PATH.$directory.$nname);\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tclosedir($handle);\\n\\t\\t}\\n\\t}\\n}\\n\\nreturn;"}',
+);

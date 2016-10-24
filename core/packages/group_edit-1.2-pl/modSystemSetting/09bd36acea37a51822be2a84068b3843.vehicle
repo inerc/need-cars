@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'group_edit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '32edcef5ba0efd7e5b0285feffe84040',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '09bd36acea37a51822be2a84068b3843',
+  'native_key' => 'group_edit.edit_in_tabs',
+  'object' => '{"key":"group_edit.edit_in_tabs","value":true,"xtype":"combo-boolean","namespace":"group_edit","area":"","editedon":null}',
+);

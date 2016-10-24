@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9da1805f49f4afa10e95e0ec7b9f7649',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f87b103c4f6ab6796dc4b423246e3d50',
+  'native_key' => 'alias_ajax_page',
+  'object' => '{"key":"alias_ajax_page","value":"ajax","xtype":"textfield","namespace":"AJAX Revolution","area":"Aliases","editedon":null,"id":7,"properties":""}',
+);

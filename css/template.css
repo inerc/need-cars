@@ -1,0 +1,594 @@
+#logo{
+    display: block;
+    float: left;
+        margin-right: 15px;
+}
+.slogan{
+       float: left;
+    font-size: 11px;
+    border-left: 1px solid #ebeaea;
+    padding: 0 0 0 15px;
+    line-height: 55px;
+    font-family: 'Tinos', serif;
+}
+#menu li{
+        float: left;
+}
+#menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    background: #FAFAFA;
+    padding: 38px 53.8px;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+#menu li a:last-child{
+    
+}
+#menu {
+border-left: 1px solid #eee;
+    margin-bottom: 10px;
+}
+#menu li a:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eeca6c;
+    height: 0px;
+    width: 100%;
+        -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#menu li a:hover:after{
+    height: 5px;
+}
+#header{
+        margin-bottom: 45px;
+}
+.mask{
+    background: #000;
+    display: block;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.mask:hover{
+    background: #eeca6c;
+}
+.mask img{
+    opacity: 0.9;
+}
+#latestNews .item{
+    width: 30%;
+    float: left;
+    margin-right: 41px;
+}
+#gallery iframe{
+    height: 150px;
+}
+#latestNews .item:hover .date{
+    background: #000;
+}
+#latestNews .item .date{
+        background: #eeca6c;
+    float: left;
+    color: #fff;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+#latestNews .item:last-child{
+    margin-right: 0px;
+}
+#latestNews .item .mask:hover{
+    background: #fff;
+}
+#latestNews .item .mask:hover img{
+    opacity: 0.5;
+}
+#latestNews .item .mask img{
+        margin-bottom: 15px;
+}
+.breadcrumbs a {display: inline-block;}
+img.fl {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+img.fr {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+a {display: inline-block;}
+#latestNews .item .podr{
+        text-decoration: none;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 13px;
+        -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#latestNews{
+padding: 0px 0 55px 0;
+float: left;
+width: 70%;
+}    
+#latestNews .item .podr:hover{
+    color: #eeca6c;
+}
+#information .item{
+    width: 50%;
+    float: left;
+}
+#information .item .pad{
+    padding: 15px;
+}
+#information .item .pad .text{
+    cursor: default;
+float: right;
+    width: 80%;
+    font-size: 14px;
+    line-height: 18px;
+            -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+#information .item .pad .text:hover{
+    color: #eeca6c;
+}
+#information .item :hover .round{
+        background: #EECA6C;
+   border: 2px solid #fff !important;
+}
+#information .item :hover .round i{
+    color: #fff;
+}
+#information .item .pad .round{
+    float: left;
+    border: 2px solid #9B999C;
+    border-radius: 50%;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    width: 90px;
+    height: 90px;
+}
+#information .item .pad .round > i{
+      line-height: 86px;
+    margin: 0 0 0 15px;
+}
+#information{
+    padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}    
+#about .column{
+     -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    font-size: 14px;
+    line-height: 18px;
+}
+#about{
+        padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}
+.border{
+            padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}
+#video .text{
+ font-size: 14px;
+    line-height: 18px;
+    float: right;
+    width: 45%;
+}
+#video{
+    padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}
+#gallery .item .mask:hover{
+    background: #fff;
+}
+#gallery .item .mask:hover img{
+    opacity: 0.7;
+}
+#gallery .item .mask .text{
+    color: #FFF;
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    font-size: 14px;
+    line-height: 18px;
+        -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-align: center;
+    opacity: 0;
+}
+#gallery .item .mask:hover .text{
+    opacity: 1;
+}
+#gallery .box {
+    float: left;
+    width: 25%;
+    position: relative;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+#gallery .boxBig {
+    float: left;
+    width: 33%;
+    position: relative;
+    padding: 13px;
+    box-sizing: border-box;
+    min-height: 432px;
+    text-align: center;
+}
+#gallery .boxBig img{
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transform-origin: center center;
+    margin: 0 auto;
+    float: none;
+    padding-bottom: 20px;
+}
+#gallery .boxBig img:hover{
+        -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+#gallery{
+    padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}
+#copyright{
+        float: left;
+    font-size: 14px;
+}
+#footer{
+    padding: 20px 0px;
+}
+#social a {
+    float: left;
+    margin: 0 0 0 15px;
+    border: 2px solid #9C999C;
+    border-radius: 50%;
+    padding: 12px;
+    text-decoration: none;
+            -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#social{
+    float: right;
+}
+#social a:hover{
+    border: 2px solid #EECA6C;
+}
+#social a i{
+                -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#social a:hover i{
+    color: #EECA6C;
+}
+#gallery .btn.active, #gallery .btn:hover{
+   background: #363235 !important;
+}
+#gallery .btn{
+                -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+float: right;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0 0 20px 20px;
+}
+#gallery .btn.prodan{
+        background: rgb(117, 42, 52);
+}
+#gallery .btn.naProdage{
+    background: rgb(60, 110, 76);
+}
+#gallery .btn.allItems {
+    background: #eeca6c;
+}
+#gallery .box.prodano .item:after {
+    content: "продано";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(181, 39, 51, 0.5);
+    text-transform: uppercase;
+    padding: 10px;
+    color: #CCC;
+}
+#gallery .box.naProdage .item:after{
+    content: "МОЖНО КУПИТЬ";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(61, 167, 85, 0.5);
+    text-transform: uppercase;
+    padding: 10px;
+    color: #CCC;
+}
+#gallery .box .text{
+line-height: 18px;
+    float: left;
+    font-size: 14px;
+    width: 100%;
+    padding: 11px 0;
+    margin-bottom: 25px;
+}
+#gallery .box .text a{
+        position: absolute;
+    bottom: 13px;
+    left: 13px;
+    background: #eeca6c;
+    float: left;
+    color: #fff;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-decoration: none;
+                    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#gallery .box .text a:hover{
+    background: #000;
+}
+#gallery .box .item{
+    position: relative;
+}
+#cart{
+    width: 790px;
+    float: left;
+    line-height: 18px;
+    font-size: 14px;
+}
+#cart .small img{
+    float: left;
+    height: 112px;
+    width: 112px;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+}
+#cart .small img:hover{
+    opacity: 0.7;
+}
+#cart .main{
+      margin-bottom: 20px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+#sliderMini{
+    float: left;
+}
+
+#sliderMini .main img{
+        width: 100%;
+}
+#category{
+float: left;
+    width: 396px;
+    text-align: left;
+    padding: 0px 0 0 75px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+}
+#autoInfo{
+    padding: 0;
+    width: 100%;
+    margin-top: 33px;
+}
+#cart .price{
+        text-align: right;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6F7B89;
+}
+#category a{
+text-decoration: none;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-size: 14px;
+        padding: 0 0 0 20px;
+}
+#category a:hover{
+    color: #eeca6c;
+}
+#category a:after{
+    left: 0px;
+    top: 4px;
+    border: 5px solid transparent;
+    border-top-color: #eeca6c;
+    display: block;
+    content: "";
+    position: absolute;
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.noHeight .box{
+    min-height: auto !important;
+}
+#vk{
+        padding: 0px 0 55px 0;
+    border-bottom: 1px solid #9C9FB4;
+}
+#advantages{
+        width: 30%;
+    float: left;
+}
+#advantages .item{
+        margin-bottom: 15px;
+    line-height: 18px;
+    font-size: 14px;
+    width: 100%;
+}
+#advantages .item i{
+    float: left;
+       margin: 4px 15px 0 0;
+}
+#advantages .item .text{
+        box-sizing: border-box;
+    padding: 0px;
+    float: left;
+    width: 90%;
+}
+#advantages .item .text h3{
+    margin-bottom: 5px;
+}
+.w70.fl #latestNews .item{
+    width: 30%;
+}
+#service .item{
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+#service .item a {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+#category a {
+    display: block;
+}
+.button{
+        background: #eeca6c;
+    float: left;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.button:hover{
+    background: #000;
+}
+#service .item a.effects{
+    background: #eeca6c;
+    float: left;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+        -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#otziv{
+        font-size: 14px;
+    line-height: 18px;
+    
+}
+img {max-width: 100%;
+box-sizing: border-box;}
+#otziv .item{
+    margin-bottom: 25px;
+}
+#otziv .text{
+    margin-bottom: 20px;
+}
+#service .item a:hover{
+    background: #000;
+}
+#service .item .text{
+    margin-bottom: 15px;
+}
+#map {
+    height: 250px;
+    width: 100%;
+    border: 1px dotted #ccc;
+}
+#feedback{
+     float: left;
+    width: 40%;
+}
+#adress{
+font-size: 14px;
+    line-height: 18px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    width: 60%;
+    float: left;
+}
+#adress .text{
+    margin-bottom: 20px;
+}
+#header .contacts{
+    float: right;
+    width: 50%;
+    font-size: 18px;
+    font-family: 'Tinos', serif;
+}
+#header .contacts .phone{
+    background: url(../img/phone.png)no-repeat 0% 50%;
+    float: left;
+    width: 50%;
+    padding: 7px 39px;
+    box-sizing: border-box;
+        line-height: 20px;
+}
+#header .contacts .location{
+      background: url(../img/location.png)no-repeat 0% 50%;
+    float: left;
+    width: 50%;
+        padding: 15px 39px;
+    box-sizing: border-box;
+}
+#addOtziv{
+    width: 50%;
+}
+#gallery .boxBig .text{
+        text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+}

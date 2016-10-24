@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'quickbar',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '43aa91d38bd17f3af2648fc5da50f79a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7567a92f157fb5a3724a8e47d0004ec4',
+  'native_key' => 'quickbar.create',
+  'object' => '{"key":"quickbar.create","value":true,"xtype":"modx-combo-boolean","namespace":"quickbar","area":"Toolbar","editedon":1441509618}',
+);

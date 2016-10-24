@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6845125ea382de129b10b47e1ab00873',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '282424f89995728eac46eb7d7a06b3da',
+  'native_key' => 'key_params',
+  'object' => '{"key":"key_params","value":"url_params","xtype":"textfield","namespace":"AJAX Revolution","area":"Request Keys","editedon":null,"id":5,"properties":""}',
+);

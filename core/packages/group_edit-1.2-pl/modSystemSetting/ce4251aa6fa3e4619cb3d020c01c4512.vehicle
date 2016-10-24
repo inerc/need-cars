@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'group_edit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bf42817fa07ea8fa320434c5bf52366a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ce4251aa6fa3e4619cb3d020c01c4512',
+  'native_key' => 'group_edit.hide_children_in_tree',
+  'object' => '{"key":"group_edit.hide_children_in_tree","value":true,"xtype":"combo-boolean","namespace":"group_edit","area":"","editedon":null}',
+);

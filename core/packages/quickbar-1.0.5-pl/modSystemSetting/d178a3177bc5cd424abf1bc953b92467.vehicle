@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'quickbar',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1efa0c58cae6373d686d2f40eba3213a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd178a3177bc5cd424abf1bc953b92467',
+  'native_key' => 'quickbar.helplink',
+  'object' => '{"key":"quickbar.helplink","value":"http:\\/\\/rtfm.modx.com\\/display\\/revolution20\\/An+Overview+of+MODX","xtype":"textfield","namespace":"quickbar","area":"Toolbar","editedon":1441509618}',
+);

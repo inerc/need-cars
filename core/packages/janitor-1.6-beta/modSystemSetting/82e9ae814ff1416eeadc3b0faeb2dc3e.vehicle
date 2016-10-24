@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'unique_key' => 'key',
+  'namespace' => 'janitor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '25283b096ed76bb315e3c08f9db76455',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '82e9ae814ff1416eeadc3b0faeb2dc3e',
+  'native_key' => 'maillog-account',
+  'object' => '{"key":"maillog-account","value":"","xtype":"textfield","namespace":"janitor","area":"Janitor","editedon":null}',
+);

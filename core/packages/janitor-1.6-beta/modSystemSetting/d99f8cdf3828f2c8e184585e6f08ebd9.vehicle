@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'related_objects' => false,
+  'unique_key' => 'key',
+  'namespace' => 'janitor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a9c921f057213c9b60f49dd0610745f4',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd99f8cdf3828f2c8e184585e6f08ebd9',
+  'native_key' => 'maillog-status',
+  'object' => '{"key":"maillog-status","value":0,"xtype":"textfield","namespace":"janitor","area":"Janitor","editedon":null}',
+);

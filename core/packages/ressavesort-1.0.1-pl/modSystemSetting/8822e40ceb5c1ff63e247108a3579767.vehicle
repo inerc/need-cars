@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ressavesort',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '14f01c5bd6e81154f035832d43a237e0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8822e40ceb5c1ff63e247108a3579767',
+  'native_key' => 'ressavesort.sorts',
+  'object' => '{"key":"ressavesort.sorts","value":"","xtype":"textfield","namespace":"ressavesort","area":"manager","editedon":null}',
+);

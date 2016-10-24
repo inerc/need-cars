@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'orphans',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'adfb33adfdee1fa3c2a81add64e15b8f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0e7f1c0ae1642131cf3c09f16c2f8502',
+  'native_key' => 'orphans.prefix',
+  'object' => '{"key":"orphans.prefix","value":"aaOrphan.","xtype":"textfield","namespace":"orphans","area":"orphans","editedon":null,"name":"Orphans Prefix","description":"orphans_prefix_desc~~Prefix to use when renaming orphans"}',
+);

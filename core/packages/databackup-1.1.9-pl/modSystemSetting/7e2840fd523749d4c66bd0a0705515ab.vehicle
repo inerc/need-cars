@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'databackup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e513ea433bad4ced08598f37d5c35de4',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7e2840fd523749d4c66bd0a0705515ab',
+  'native_key' => 'databackup.purge',
+  'object' => '{"key":"databackup.purge","value":"1814400","xtype":"textfield","namespace":"databackup","area":"File System","editedon":null}',
+);

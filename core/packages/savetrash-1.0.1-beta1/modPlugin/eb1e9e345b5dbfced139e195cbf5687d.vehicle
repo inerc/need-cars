@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      '93d915419351631364e9f45bb2a83efc' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":6,"event":"OnBeforeEmptyTrash","priority":0,"propertyset":0}',
+        'guid' => 'd25831b2e0cd2b3217a3466af521250a',
+        'native_key' => 
+        array (
+          0 => 6,
+          1 => 'OnBeforeEmptyTrash',
+        ),
+        'signature' => '1d3c95ee8bcf1a97c9ece15a07192a40',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'savetrash',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a59bdecc6b944ccffd09930ead9b61b5',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => 'eb1e9e345b5dbfced139e195cbf5687d',
+  'native_key' => 6,
+  'object' => '{"id":6,"source":1,"property_preprocess":0,"name":"Move deleted and removed files to trash-context","description":"Instead of removing all deleted resources, dupe them to a \'Trash\' context. This is for environments where multiple managers work at the same system.\\nDelete them again to remove irreversibly.","editor_type":0,"category":0,"cache_type":0,"plugincode":"$trashContextKey = $modx->getOption(\'trashContextKey\', $scriptProperties, \'Trash\');\\nif($modx->event->name == \\"OnBeforeEmptyTrash\\"){\\n \\/\\/ Check for context existence\\n $ct = $modx->getObject(\'modContext\', array(\'key\'=>$trashContextKey));\\n if(!is_object($ct)){\\n\\t $ct = $modx->newObject(\'modContext\');\\n\\t $ct->set(\'key\', $trashContextKey);\\n\\t $ct->set(\'description\', \'The \'.$trashContextKey.\' context holds the deleted resources that are purged from the trash can.\');\\n\\t $ct->set(\'rank\', 9999);\\n\\t $ct->save();\\n }\\n $old_ids = array();\\n $ress = array();\\n foreach($modx->event->params[\'resources\'] as $resref){\\n  \\/\\/ Don\'t duplicate delete resources in trash context\\n  if($resref->get(\'context_key\')==$trashContextKey) continue;\\n  \\n  $res = $resref->duplicate();\\n  $ress[] = $res;\\n  $old_ids[$resref->get(\'id\')] = $res->get(\'id\');\\n\\n  if(!in_array($res->get(\'parent\'),$ids)) $res->set(\'parent\',0);\\n  $res->set(\'context_key\', $trashContextKey);\\n  $res->set(\'deleted\', 0);\\n  $res->set(\'deletedon\', 0);\\n  $res->set(\'deletedby\', 0);\\n  $res->save();\\n }\\n \\n foreach($ress as $res){\\n \\t$res->set(\'parent\', in_array($res->get(\'parent\'), array_keys($old_ids)) ? $old_ids[$res->get(\'parent\')] : 0);\\n \\t$res->save();\\n }\\n \\n return \\"Deleted resources copied to $trashContextKey context\\";\\n}","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"$trashContextKey = $modx->getOption(\'trashContextKey\', $scriptProperties, \'Trash\');\\nif($modx->event->name == \\"OnBeforeEmptyTrash\\"){\\n \\/\\/ Check for context existence\\n $ct = $modx->getObject(\'modContext\', array(\'key\'=>$trashContextKey));\\n if(!is_object($ct)){\\n\\t $ct = $modx->newObject(\'modContext\');\\n\\t $ct->set(\'key\', $trashContextKey);\\n\\t $ct->set(\'description\', \'The \'.$trashContextKey.\' context holds the deleted resources that are purged from the trash can.\');\\n\\t $ct->set(\'rank\', 9999);\\n\\t $ct->save();\\n }\\n $old_ids = array();\\n $ress = array();\\n foreach($modx->event->params[\'resources\'] as $resref){\\n  \\/\\/ Don\'t duplicate delete resources in trash context\\n  if($resref->get(\'context_key\')==$trashContextKey) continue;\\n  \\n  $res = $resref->duplicate();\\n  $ress[] = $res;\\n  $old_ids[$resref->get(\'id\')] = $res->get(\'id\');\\n\\n  if(!in_array($res->get(\'parent\'),$ids)) $res->set(\'parent\',0);\\n  $res->set(\'context_key\', $trashContextKey);\\n  $res->set(\'deleted\', 0);\\n  $res->set(\'deletedon\', 0);\\n  $res->set(\'deletedby\', 0);\\n  $res->save();\\n }\\n \\n foreach($ress as $res){\\n \\t$res->set(\'parent\', in_array($res->get(\'parent\'), array_keys($old_ids)) ? $old_ids[$res->get(\'parent\')] : 0);\\n \\t$res->save();\\n }\\n \\n return \\"Deleted resources copied to $trashContextKey context\\";\\n}"}',
+);

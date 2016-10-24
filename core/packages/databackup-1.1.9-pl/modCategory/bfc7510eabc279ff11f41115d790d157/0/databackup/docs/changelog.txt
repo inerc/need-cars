@@ -1,0 +1,56 @@
+Changelog for DataBackup
+================================================================
+- 1.1.9pl 5-8-2014
+    - Updated default property set to have the system setting and set these to preprocess
+
+================================================================
+- 1.1.8pl 5-2-2014
+    - Minor issue with wincache or similar where if run to close together
+        the files would append the tmp files, basically doubling the insert records
+    
+================================================================
+- 1.1.7pl 10-16-2013
+    - #9 Memory improvements
+    - added new property: tempFolder ~ temp file directory that holds data as MODX builds backup
+    - added new setting: temp ~ same as the tempFolder property
+    - allow spacing in includeTables and excludeTables ~ they will be auto removed
+    
+================================================================
+- 1.1.6pl 5-20-2013
+    - #9 Memory & performance improvements
+    
+================================================================
+- 1.1.5pl 5-1-2013
+    - #8 Fix passing the purge time set in snippet
+    
+================================================================
+- 1.1.4pl 4-12-2013
+    - #5 Added safeguard not to delete: core, manager and assets paths on purge command 
+
+================================================================
+- 1.1.3pl 9-28-2012
+   - Fixed #3 set default db name from MODX settings/api rather than hard coded 
+   - Several more fixes and usability improvements thanks to yurkobb
+   - NOTE Setting change to: databackup.purge from: databackup.pruge 
+
+================================================================
+- 1.1.2pl 6-25-2012
+   - Added the System Settings to the build script 
+
+================================================================
+- 1.1.1pl 6-22-2012
+   - Fixed call to undefined variable
+   - Set to Revo 2.2.* in Packages 
+
+
+================================================================
+- 1.1pl 9-30-2011
+  #2 Added includeTables and excludeTables options
+  #1 Put up docs: http://rtfm.modx.com/display/ADDON/Databackup
+
+================================================================
+- 1.0.1pl
+ Fixed file case naming error.  This would have caused some Unix/Linux trouble.
+
+================================================================
+- Initial release 1.0pl 8-12-2011

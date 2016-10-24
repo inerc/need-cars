@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'databackup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab7d25383ab457813e9fc9054607697f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '01b3b1c51058556b206f646d120d9821',
+  'native_key' => 'databackup.folder',
+  'object' => '{"key":"databackup.folder","value":"{core_path}components\\/databackup\\/dumps\\/","xtype":"textfield","namespace":"databackup","area":"File System","editedon":null}',
+);

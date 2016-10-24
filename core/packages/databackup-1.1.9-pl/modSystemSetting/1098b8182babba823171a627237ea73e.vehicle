@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'databackup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2fca14462f37a20fc9b0b3fe6b0bcf7a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1098b8182babba823171a627237ea73e',
+  'native_key' => 'databackup.temp',
+  'object' => '{"key":"databackup.temp","value":"{core_path}components\\/databackup\\/dumps\\/temp\\/","xtype":"textfield","namespace":"databackup","area":"File System","editedon":null}',
+);

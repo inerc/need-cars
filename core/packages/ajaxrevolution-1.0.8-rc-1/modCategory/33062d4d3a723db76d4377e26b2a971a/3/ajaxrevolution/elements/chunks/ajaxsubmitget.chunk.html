@@ -1,0 +1,22 @@
+<script type="text/javascript">
+$('[[+cssButton]]').click(function(event)
+{   [[+jsPreSubmit]]
+    $.ajax({
+        type:'GET',
+        url:'[[+toURL]]', 
+        data:$('[[+cssForm]]').serialize(), 
+		success:function(data)
+        {   [[+jsPreSuccess]]
+            $('[[+toCSSBox]]').html(data);   
+            [[+jsPostSuccess]]
+        }, 
+		error:function(XMLHttpRequest, textStatus, errorThrown)
+        {   [[+jsPreError]]
+            $('[[+toCSSBox]]').html(errorThrown + ': ' + this.url);  
+            [[+jsPostError]]
+        },
+		dataType:'html'
+	});
+    [[+jsPostSubmit]]
+});
+</script>

@@ -1,0 +1,44 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => false,
+  'namespace' => 'versionx',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"versionx-2.1.2-pl\\/modCategory\\/c7c31abcbb1216d62f8deff18301a6d9\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"versionx"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"versionx-2.1.2-pl\\/modCategory\\/c7c31abcbb1216d62f8deff18301a6d9\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"versionx"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"versionx-2.1.2-pl\\/modCategory\\/c7c31abcbb1216d62f8deff18301a6d9.tables.resolver.resolver","type":"php","name":"tables.resolver"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"versionx-2.1.2-pl\\/modCategory\\/c7c31abcbb1216d62f8deff18301a6d9.setupoptions.resolver.resolver","type":"php","name":"setupoptions.resolver"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"versionx-2.1.2-pl\\/modCategory\\/c7c31abcbb1216d62f8deff18301a6d9.dashboardwidgets.resolver.resolver","type":"php","name":"dashboardwidgets.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '09da42b38c9b5cda4c3db936d013b96c',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'c7c31abcbb1216d62f8deff18301a6d9',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"VersionX","rank":0}',
+);

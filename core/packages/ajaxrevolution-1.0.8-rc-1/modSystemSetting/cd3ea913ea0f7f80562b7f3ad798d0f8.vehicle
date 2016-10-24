@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6f8ffa44973f884333f97c3e12f2f220',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cd3ea913ea0f7f80562b7f3ad798d0f8',
+  'native_key' => 'degrade_to_template',
+  'object' => '{"key":"degrade_to_template","value":"1","xtype":"modx-combo-template","namespace":"AJAX Revolution","area":"Templates","editedon":null,"id":1,"properties":""}',
+);

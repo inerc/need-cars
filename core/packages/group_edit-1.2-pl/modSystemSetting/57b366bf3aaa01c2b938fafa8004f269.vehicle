@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'group_edit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ae798a542b676f07462f6548320b0f41',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '57b366bf3aaa01c2b938fafa8004f269',
+  'native_key' => 'group_edit.fields',
+  'object' => '{"key":"group_edit.fields","value":"pagetitle,alias,publishedon||pagetitle,alias,1,2","xtype":"textfield","namespace":"group_edit","area":"","editedon":null}',
+);

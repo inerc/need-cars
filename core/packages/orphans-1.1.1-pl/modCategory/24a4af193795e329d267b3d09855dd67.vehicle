@@ -1,0 +1,74 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '4bab9ecfec8f8f36dea98b5312a86244' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"OrphansIgnoreList","description":"Ignore list for Orphans extra. List known non-orphans here","editor_type":0,"category":0,"cache_type":0,"snippet":"OrphansIgnoreList","locked":0,"properties":"a:0:{}","static":0,"static_file":"","content":"OrphansIgnoreList"}',
+        'guid' => 'd594ea755b9aa1350ced2ba6274393ed',
+        'native_key' => 1,
+        'signature' => '5f68a4a72115224096aa5bab8dd53758',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '4c388ce374dcf6166f269c3ba609ce42' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"Orphans","description":"Standalone Version of Orphans","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * Orphans snippet for Orphans extra\\n *\\n * Copyright 2013 by Bob Ray <http:\\/\\/bobsguides.com>\\n * Created on 02-07-2015\\n *\\n * Orphans is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * Orphans is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Orphans; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package orphans\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * Standalone Version of Orphans\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package orphans\\n **\\/\\nexit;\\nif (!defined(\'MODX_CORE_PATH\')) {\\n    @include(dirname(__FILE__) . \'\\/config.core.php\');\\n\\n    if (!defined(\'MODX_CORE_PATH\')) {\\n        @include dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . \'\\/config.core.php\';\\n    }\\n    if (!defined(\'MODX_CORE_PATH\')) {\\n        die(\'No config.core.php\');\\n    }\\n    @include MODX_CORE_PATH . \'model\\/modx\\/modx.class.php\';\\n    $modx = new modX();\\n    if ($modx instanceof modX) {\\n        $modx->initialize(\'mgr\');\\n    } else {\\n        die(\'No MODX\');\\n    }\\n    $modx->getService(\'error\', \'error.modError\', \'\', \'\');\\n    $modx->setLogLevel(xPDO::LOG_LEVEL_INFO);\\n    if (php_sapi_name() == \'cli\') {\\n        $cliMode = true;\\n        $modx->setLogTarget(\'ECHO\');\\n    } else {\\n        $modx->setLogTarget(\'HTML\');\\n    }\\n    $modx->getRequest();\\n    $homeId = $modx->getOption(\'site_start\');\\n    $homeResource = $modx->getObject(\'modResource\', $homeId);\\n\\n    if ($homeResource instanceof modResource) {\\n        $modx->resource = $homeResource;\\n    } else {\\n        $homeResource = $modx->getObject(\'modResource\', 1);\\n        if ($homeResource) {\\n            $modx->resource = $homeResource;\\n        }\\n    }\\n\\n    $myUser = $modx->getObject(\'modUser\');\\n    if ($myUser instanceof modUser) {\\n        $modx->user = $myUser;\\n    }\\n}\\n\\n@include MODX_CORE_PATH . \'components\\/orphans\\/model\\/orphans\\/orphans.class.php\';\\n\\n$types = array(\\n    \'modChunk\',\\n    \'modTemplate\',\\n    \'modTemplateVar\',\\n    \'modSnippet\',\\n);\\n\\nfunction output($msg, $suppressCr = false) {\\n    if (php_sapi_name() === \'cli\') {\\n        $output = \\"\\\\n\\" . $msg;\\n    } else {\\n        $output = \\"<br \\/>\\" . $msg;\\n    }\\n    echo $output;\\n}\\n\\n$logLevel = $modx->setLogLevel(MODX::LOG_LEVEL_ERROR);\\n$orphans = new Orphans($modx);\\nif ($orphans instanceof Orphans) {\\n    $orphans->initialize();\\n} else {\\n    die(\'No Orphans class\');\\n}\\n\\nif (php_sapi_name() !== \'cli\') {\\n    output(\'<pre>\');\\n}\\nforeach ($types as $type) {\\n    output(\'--------------------------------\');\\n    output(strtoupper(substr($type, 3) . \'S\'));\\n    $results = $orphans->process($type);\\n\\n    if (empty($results)) {\\n        $output(\'    No orphans found\');\\n    } else {\\n        foreach ($results as $result) {\\n            output(\'   \' . $result[\'name\'] . \' (\' . $result[\'id\'] . \')\');\\n            output(\'      Category: \' . $result[\'category\']);\\n            output(\'      Description: \' . $result[\'description\']);\\n            output(\'\');\\n        }\\n    }\\n\\n}\\n\\noutput(\\"Finished!\\");\\n$modx->setLogLevel($logLevel);\\n\\nexit;","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * Orphans snippet for Orphans extra\\n *\\n * Copyright 2013 by Bob Ray <http:\\/\\/bobsguides.com>\\n * Created on 02-07-2015\\n *\\n * Orphans is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * Orphans is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * Orphans; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package orphans\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * Standalone Version of Orphans\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package orphans\\n **\\/\\nexit;\\nif (!defined(\'MODX_CORE_PATH\')) {\\n    @include(dirname(__FILE__) . \'\\/config.core.php\');\\n\\n    if (!defined(\'MODX_CORE_PATH\')) {\\n        @include dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . \'\\/config.core.php\';\\n    }\\n    if (!defined(\'MODX_CORE_PATH\')) {\\n        die(\'No config.core.php\');\\n    }\\n    @include MODX_CORE_PATH . \'model\\/modx\\/modx.class.php\';\\n    $modx = new modX();\\n    if ($modx instanceof modX) {\\n        $modx->initialize(\'mgr\');\\n    } else {\\n        die(\'No MODX\');\\n    }\\n    $modx->getService(\'error\', \'error.modError\', \'\', \'\');\\n    $modx->setLogLevel(xPDO::LOG_LEVEL_INFO);\\n    if (php_sapi_name() == \'cli\') {\\n        $cliMode = true;\\n        $modx->setLogTarget(\'ECHO\');\\n    } else {\\n        $modx->setLogTarget(\'HTML\');\\n    }\\n    $modx->getRequest();\\n    $homeId = $modx->getOption(\'site_start\');\\n    $homeResource = $modx->getObject(\'modResource\', $homeId);\\n\\n    if ($homeResource instanceof modResource) {\\n        $modx->resource = $homeResource;\\n    } else {\\n        $homeResource = $modx->getObject(\'modResource\', 1);\\n        if ($homeResource) {\\n            $modx->resource = $homeResource;\\n        }\\n    }\\n\\n    $myUser = $modx->getObject(\'modUser\');\\n    if ($myUser instanceof modUser) {\\n        $modx->user = $myUser;\\n    }\\n}\\n\\n@include MODX_CORE_PATH . \'components\\/orphans\\/model\\/orphans\\/orphans.class.php\';\\n\\n$types = array(\\n    \'modChunk\',\\n    \'modTemplate\',\\n    \'modTemplateVar\',\\n    \'modSnippet\',\\n);\\n\\nfunction output($msg, $suppressCr = false) {\\n    if (php_sapi_name() === \'cli\') {\\n        $output = \\"\\\\n\\" . $msg;\\n    } else {\\n        $output = \\"<br \\/>\\" . $msg;\\n    }\\n    echo $output;\\n}\\n\\n$logLevel = $modx->setLogLevel(MODX::LOG_LEVEL_ERROR);\\n$orphans = new Orphans($modx);\\nif ($orphans instanceof Orphans) {\\n    $orphans->initialize();\\n} else {\\n    die(\'No Orphans class\');\\n}\\n\\nif (php_sapi_name() !== \'cli\') {\\n    output(\'<pre>\');\\n}\\nforeach ($types as $type) {\\n    output(\'--------------------------------\');\\n    output(strtoupper(substr($type, 3) . \'S\'));\\n    $results = $orphans->process($type);\\n\\n    if (empty($results)) {\\n        $output(\'    No orphans found\');\\n    } else {\\n        foreach ($results as $result) {\\n            output(\'   \' . $result[\'name\'] . \' (\' . $result[\'id\'] . \')\');\\n            output(\'      Category: \' . $result[\'category\']);\\n            output(\'      Description: \' . $result[\'description\']);\\n            output(\'\');\\n        }\\n    }\\n\\n}\\n\\noutput(\\"Finished!\\");\\n$modx->setLogLevel($logLevel);\\n\\nexit;"}',
+        'guid' => 'f5510d9b4b59ef6cadf94c57044bef60',
+        'native_key' => 1,
+        'signature' => 'ea3598d0ebb7f6041bd025170a6e4599',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'orphans',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"orphans-1.1.1-pl\\/modCategory\\/24a4af193795e329d267b3d09855dd67\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"orphans"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"orphans-1.1.1-pl\\/modCategory\\/24a4af193795e329d267b3d09855dd67\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"orphans"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a440683809dbc51107a7fe57a8e13ac8',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '24a4af193795e329d267b3d09855dd67',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Orphans"}',
+);

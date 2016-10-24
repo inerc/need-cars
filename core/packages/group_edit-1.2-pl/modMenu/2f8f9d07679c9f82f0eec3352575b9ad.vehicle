@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'b0d099a47c7c9d56c0d27a1c6b483a22' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"group_edit","controller":"index","haslayout":1,"lang_topics":"group_edit:default","assets":"","help_url":"","parent":"0"}',
+        'guid' => 'f69e72978bb779dfd2830b6250bfa03d',
+        'native_key' => 1,
+        'signature' => 'cb088ee8d5b940cb6d4f4ae4dbecf6fb',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'group_edit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a5a4776c875f174c278a743cbf241c07',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '2f8f9d07679c9f82f0eec3352575b9ad',
+  'native_key' => 'group_edit',
+  'object' => '{"text":"group_edit","parent":"components","action":1,"description":"","icon":"","menuindex":0,"params":"","handler":"","permissions":""}',
+);

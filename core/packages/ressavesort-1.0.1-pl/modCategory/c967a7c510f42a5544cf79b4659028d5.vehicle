@@ -1,0 +1,60 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '8bcfaf0cc49c0ad9dcb319cfcc2a1dc0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"ResSaveSort","description":"Sort MODX containers after saving resources.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * ResSaveSort\\n *\\n * Copyright 2013 by Thomas Jakobi <thomas.jakobi@partout.info>\\n *\\n * ResSaveSort is free software; you can redistribute it and\\/or modify it\\n * under the terms of the GNU General Public License as published by the Free\\n * Software Foundation; either version 2 of the License, or (at your option) any\\n * later version.\\n *\\n * ResSaveSort is distributed in the hope that it will be useful, but\\n * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * ResSaveSort; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package ressavesort\\n * @subpackage plugin\\n *\\n * Plugin Code\\n *\\/\\nswitch ($modx->event->name) {\\n    case \'OnDocFormSave\':\\n        $parent = $resource->get(\'parent\');\\n\\n        \\/\\/ get ressavesort system settings\\n        $sorts = $modx->fromJSON($modx->getOption(\'ressavesort.sorts\', null, \'\'));\\n        if ($sorts) {\\n            \\/\\/ work each configuration\\n            foreach ($sorts as $sort) {\\n                \\/\\/ get each configuration setting\\n                $sortBy = $modx->getOption(\'sortby\', $sort, \'pagetitle\', true);\\n                $sortDir = $modx->getOption(\'sortdir\', $sort, \'asc\', true);\\n                $sortContainer = $modx->getOption(\'sortcontainer\', $sort, $parent, true);\\n\\n                $sortContainer = explode(\',\', $sortContainer);\\n                foreach ($sortContainer as $key => $value) {\\n                    $sortContainer[$key] = intval($value);\\n                }\\n\\n                \\/\\/ if resource lasts in one sorted container\\n                if (in_array($parent, $sortContainer, true)) {\\n                    $c = $modx->newQuery(\'modResource\');\\n\\n                    if (substr($sortBy, 0, 3) != \'tv.\') {\\n                        \\/\\/ sortby resource field\\n                        $c->select(\'modResource.*\');\\n                        $c->where(array(\'parent:=\' => $parent));\\n                        $c->sortby($sortBy, $sortDir);\\n                    } else {\\n                        \\/\\/ sortby template variable\\n                        $c->select(\'modResource.*, tvc.value, tv.name\');\\n                        $c->where(array(\'parent:=\' => $parent, array(\'AND:tv.name:=\' => substr($sortBy, 3), \'OR:tv.name:=\' => null)));\\n                        $c->sortby(\'value\', $sortDir);\\n                        $c->leftJoin(\'modTemplateVarResource\', \'tvc\', array(\'tvc.contentid = modResource.id\'));\\n                        $c->leftJoin(\'modTemplateVar\', \'tv\', array(\'tv.id = tvc.tmplvarid\'));\\n                    }\\n                    \\/\\/ get sorted resources\\n                    $siblings = $modx->getCollection(\'modResource\', $c);\\n                    if (count($siblings) > 0) {\\n                        $menuindex = 0;\\n                        \\/\\/ replace the menuindex\\n                        foreach ($siblings as $sibling) {\\n                            $sibling->set(\'menuindex\', $menuindex);\\n                            $sibling->save();\\n                            $menuindex++;\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * ResSaveSort\\n *\\n * Copyright 2013 by Thomas Jakobi <thomas.jakobi@partout.info>\\n *\\n * ResSaveSort is free software; you can redistribute it and\\/or modify it\\n * under the terms of the GNU General Public License as published by the Free\\n * Software Foundation; either version 2 of the License, or (at your option) any\\n * later version.\\n *\\n * ResSaveSort is distributed in the hope that it will be useful, but\\n * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\\n * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * ResSaveSort; if not, write to the Free Software Foundation, Inc.,\\n * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package ressavesort\\n * @subpackage plugin\\n *\\n * Plugin Code\\n *\\/\\nswitch ($modx->event->name) {\\n    case \'OnDocFormSave\':\\n        $parent = $resource->get(\'parent\');\\n\\n        \\/\\/ get ressavesort system settings\\n        $sorts = $modx->fromJSON($modx->getOption(\'ressavesort.sorts\', null, \'\'));\\n        if ($sorts) {\\n            \\/\\/ work each configuration\\n            foreach ($sorts as $sort) {\\n                \\/\\/ get each configuration setting\\n                $sortBy = $modx->getOption(\'sortby\', $sort, \'pagetitle\', true);\\n                $sortDir = $modx->getOption(\'sortdir\', $sort, \'asc\', true);\\n                $sortContainer = $modx->getOption(\'sortcontainer\', $sort, $parent, true);\\n\\n                $sortContainer = explode(\',\', $sortContainer);\\n                foreach ($sortContainer as $key => $value) {\\n                    $sortContainer[$key] = intval($value);\\n                }\\n\\n                \\/\\/ if resource lasts in one sorted container\\n                if (in_array($parent, $sortContainer, true)) {\\n                    $c = $modx->newQuery(\'modResource\');\\n\\n                    if (substr($sortBy, 0, 3) != \'tv.\') {\\n                        \\/\\/ sortby resource field\\n                        $c->select(\'modResource.*\');\\n                        $c->where(array(\'parent:=\' => $parent));\\n                        $c->sortby($sortBy, $sortDir);\\n                    } else {\\n                        \\/\\/ sortby template variable\\n                        $c->select(\'modResource.*, tvc.value, tv.name\');\\n                        $c->where(array(\'parent:=\' => $parent, array(\'AND:tv.name:=\' => substr($sortBy, 3), \'OR:tv.name:=\' => null)));\\n                        $c->sortby(\'value\', $sortDir);\\n                        $c->leftJoin(\'modTemplateVarResource\', \'tvc\', array(\'tvc.contentid = modResource.id\'));\\n                        $c->leftJoin(\'modTemplateVar\', \'tv\', array(\'tv.id = tvc.tmplvarid\'));\\n                    }\\n                    \\/\\/ get sorted resources\\n                    $siblings = $modx->getCollection(\'modResource\', $c);\\n                    if (count($siblings) > 0) {\\n                        $menuindex = 0;\\n                        \\/\\/ replace the menuindex\\n                        foreach ($siblings as $sibling) {\\n                            $sibling->set(\'menuindex\', $menuindex);\\n                            $sibling->save();\\n                            $menuindex++;\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n}"}',
+        'guid' => 'b6871dd1f8c696c7369b86a2f7ef4d79',
+        'native_key' => 1,
+        'signature' => '427f48740f9adc2f1784d896d37f4489',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '7fa7ec692dd127d273514818be9e00ee' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormSave","priority":0,"propertyset":0}',
+              'guid' => '4e5821b63f1a6e870a0c7d61a6e7c548',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormSave',
+              ),
+              'signature' => '936d89fc9144d4bc0ccbdc10a6a5239b',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'ressavesort',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cb2bb6b3e6a973a953792b8d2fcadc6f',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'c967a7c510f42a5544cf79b4659028d5',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"ResSaveSort"}',
+);

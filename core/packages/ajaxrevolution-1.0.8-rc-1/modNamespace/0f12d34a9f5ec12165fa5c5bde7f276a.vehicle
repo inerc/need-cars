@@ -1,0 +1,18 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'resolve_files' => true,
+  'resolve_php' => true,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '14d50ba96a0e0414bc0f6d24589f9d10',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '0f12d34a9f5ec12165fa5c5bde7f276a',
+  'native_key' => 'AJAX Revolution',
+  'object' => '{"name":"AJAX Revolution","path":"{core_path}components\\/ajaxrevolution\\/","assets_path":""}',
+);

@@ -1,0 +1,23 @@
+body {
+	overflow: auto;
+	min-width: 820px;
+	min-height: 510px;
+}
+div.wrapper {
+	width: 800px;
+	height: 450px;
+	padding-top: 0px;
+}
+nav.top-menu ul>li{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//fwNAgAEACXwDfugyhDIAAAAASUVORK5CYII=');
+}
+nav.top-menu ul>li:hover{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi/v///xmAAAMACdcDza8BxngAAAAASUVORK5CYII=');
+}
+nav.top-menu ul>li>a{
+	font-size: 14px;
+}
+div.page .content{
+	border: 1px solid #fff;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgaAAIMAAAhQCB69VMmQAAAABJRU5ErkJggg==');
+}

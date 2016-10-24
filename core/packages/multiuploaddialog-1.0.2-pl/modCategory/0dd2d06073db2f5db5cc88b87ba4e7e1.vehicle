@@ -1,0 +1,59 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '68b5eeef282a3106e3c419afb21a3a9c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"MultiUploadDialogInjector","description":"This plugin replaces the default upload dialog with an enhanced multi-upload dialog, capable of multi file select and drag\'n\'drop.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * MultiUploadDialogInjector plugin for MultiUploadDialog extra\\n *\\n * Copyright 2014 by Thomas Dullnig\\n * Created on 02-27-2014\\n *\\n * MultiUploadDialog is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * MultiUploadDialog is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * MultiUploadDialog; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package multiuploaddialog\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * This plugin replaces the default upload dialog with an enhanced multi-upload dialog, capable of multi file select and drag\'n\'drop.\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package multiuploaddialog\\n **\\/\\n\\nif(!function_exists(\'add_lang_topic\')){\\n    function add_lang_topic($topic = \'multiuploaddialog:default\', $prefix = \'multiuploaddialog\'){\\n        global $modx;\\n        $modx->lexicon->load($topic);\\n        $lang = $modx->lexicon->fetch($prefix);\\n        if($lang){\\n            \\/\\/I HATE javascript code inside PHP strings!!!!!! Still I have to use it...cruel world!\\n            $modx->regClientStartupHTMLBlock(\\n                \'<script>\\n                    Ext.namespace(\\"MODx.lang\\");\\n                    Ext.applyIf(MODx.lang, \' . json_encode($lang) . \');\\n                <\\/script>\'\\n            );\\n        }\\n    }\\n}\\n\\nswitch($modx->event->name){\\n    case \'OnManagerPageBeforeRender\':\\n\\n        $modx->controller->addLexiconTopic(\'multiuploaddialog:default\');\\n        $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/multiuploaddialog\\/libs\\/fileapi\\/FileAPI.min.js\');\\n        $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/multiuploaddialog\\/js\\/multiuploaddialog-min.js\');\\n\\n        break;\\n    case \'OnRichTextBrowserInit\':\\n        \\/\\/MODx does not use modManagerController::addLexiconTopic for file-browser-view so we have to load the language topic manually.\\n        add_lang_topic();\\n        break;\\n}","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * MultiUploadDialogInjector plugin for MultiUploadDialog extra\\n *\\n * Copyright 2014 by Thomas Dullnig\\n * Created on 02-27-2014\\n *\\n * MultiUploadDialog is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * MultiUploadDialog is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * MultiUploadDialog; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package multiuploaddialog\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * This plugin replaces the default upload dialog with an enhanced multi-upload dialog, capable of multi file select and drag\'n\'drop.\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package multiuploaddialog\\n **\\/\\n\\nif(!function_exists(\'add_lang_topic\')){\\n    function add_lang_topic($topic = \'multiuploaddialog:default\', $prefix = \'multiuploaddialog\'){\\n        global $modx;\\n        $modx->lexicon->load($topic);\\n        $lang = $modx->lexicon->fetch($prefix);\\n        if($lang){\\n            \\/\\/I HATE javascript code inside PHP strings!!!!!! Still I have to use it...cruel world!\\n            $modx->regClientStartupHTMLBlock(\\n                \'<script>\\n                    Ext.namespace(\\"MODx.lang\\");\\n                    Ext.applyIf(MODx.lang, \' . json_encode($lang) . \');\\n                <\\/script>\'\\n            );\\n        }\\n    }\\n}\\n\\nswitch($modx->event->name){\\n    case \'OnManagerPageBeforeRender\':\\n\\n        $modx->controller->addLexiconTopic(\'multiuploaddialog:default\');\\n        $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/multiuploaddialog\\/libs\\/fileapi\\/FileAPI.min.js\');\\n        $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/multiuploaddialog\\/js\\/multiuploaddialog-min.js\');\\n\\n        break;\\n    case \'OnRichTextBrowserInit\':\\n        \\/\\/MODx does not use modManagerController::addLexiconTopic for file-browser-view so we have to load the language topic manually.\\n        add_lang_topic();\\n        break;\\n}"}',
+        'guid' => 'dfdeadc59da9bafceba92b6e27644bb9',
+        'native_key' => 1,
+        'signature' => 'acb28efd37e2baac0c278f2cbd781229',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'multiuploaddialog',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"multiuploaddialog-1.0.2-pl\\/modCategory\\/0dd2d06073db2f5db5cc88b87ba4e7e1\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"multiuploaddialog"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"multiuploaddialog-1.0.2-pl\\/modCategory\\/0dd2d06073db2f5db5cc88b87ba4e7e1\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"multiuploaddialog"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"multiuploaddialog-1.0.2-pl\\/modCategory\\/0dd2d06073db2f5db5cc88b87ba4e7e1.plugin.resolver.resolver","type":"php","name":"plugin.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6ba0f1e477c8dc6341f5173e951dc646',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0dd2d06073db2f5db5cc88b87ba4e7e1',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"MultiUploadDialog"}',
+);

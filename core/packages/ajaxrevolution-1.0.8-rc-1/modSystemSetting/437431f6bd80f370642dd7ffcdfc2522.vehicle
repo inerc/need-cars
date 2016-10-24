@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'AJAX Revolution',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0442a3126f77268c676fff78e6958a99',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '437431f6bd80f370642dd7ffcdfc2522',
+  'native_key' => 'alias_degrade',
+  'object' => '{"key":"alias_degrade","value":"full","xtype":"textfield","namespace":"AJAX Revolution","area":"Aliases","editedon":null,"id":2,"properties":""}',
+);

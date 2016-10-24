@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'quickbar',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a64cd11a4568721cf15ce57bad6ec5a7',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '91e0d3042174a86ec69f844c9b7a6848',
+  'native_key' => 'quickbar.css',
+  'object' => '{"key":"quickbar.css","value":"[[++assets_url]]components\\/quickbar\\/css\\/sublime.css","xtype":"textfield","namespace":"quickbar","area":"Theme","editedon":1441509618}',
+);
